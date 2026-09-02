@@ -2,7 +2,7 @@
 title: "The Background"
 description: "Where we started"
 pubDate: "Sep 02 2026"
-heroImage: "/logo.svg"
+heroImage: "/og-default.png"
 ---
 
 I had a wonderful brand new home NAS setup for about 4 months. Then the motherboard started making this awful whine/vibrating constantly. At first, I told myself the fans were dirty, and it would be ok when I had a chance to properly clean out the dust. When I did, and it immediately made the same notice upon plugging it in and hitting power… I was disheartened. It had taken all of my old IT skills nearly 7 years removed from working in the field, to open this device, take out the fans, clean them and reassemble it.
