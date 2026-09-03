@@ -3,6 +3,52 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const ethos = [
+	'FOSS',
+	'Solar Punk',
+	'Digital Homesteading',
+	'Maker Culture',
+	'Upcycling',
+	'Hardware Reclamation',
+	'DIY',
+	'Community Empowerment',
+	'Energy Transparency',
+];
+
+const journey = [
+	{
+		title: '1. Awareness',
+		text: 'Follow the "Building in Public" journey on Punk Pages — the wins, the failures, and the compromises of going sovereign.',
+	},
+	{
+		title: '2. Low-Hanging Fruit',
+		text: 'Simple Sovereignty Wins: Vaultwarden for passwords, Jellyfin for movies, Kavita for your e-book shelf, or an old phone reborn as a secure family tablet.',
+	},
+	{
+		title: '3. The Pivot',
+		text: 'A flat-fee Cloud Exit Audit maps your dependencies and your cloud spend, then builds the migration roadmap back to hardware you actually own.',
+	},
+	{
+		title: '4. Full Homestead',
+		text: 'Your FOSS stack, implemented on refurbished hardware and kept healthy by The Guardian Retainer.',
+	},
+];
+
+const quickWins = [
+	{
+		title: 'The Password Clinic',
+		text: "30 minutes with Vaultwarden. Free or cheap, it's the trust-builder and the catalog's best first lesson.",
+	},
+	{
+		title: 'The Family Media Server',
+		text: "The flagship: that old laptop in your closet becomes your family's Netflix (Jellyfin), playing your own media — home videos, photos, music, owned discs. LAN-only to start.",
+	},
+	{
+		title: "Kids' Tech Lockdown",
+		text: "Lock down a child's device, or repurpose an old phone into a secure, locked-down family tablet.",
+	},
+];
 ---
 
 <!doctype html>
@@ -13,35 +59,81 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Disintermediation.</h1>
-			<p>
-				Removing the parasitic middlemen from digital and physical infrastructure to empower community sovereignty.
-			</p>
-			<p>
-				Punk Positronics is a movement toward a non-corporate, planet-first approach to technology. We believe in a "built-not-bought" world where you own your data, your hardware, and your destiny.
-			</p>
+			<section class="hero">
+				<h1>Disintermediation.</h1>
+				<p class="mission">
+					Removing the parasitic middlemen from digital and physical infrastructure to empower community sovereignty.
+				</p>
+				<p>
+					Punk Positronics is <strong>a man, not a corporation</strong> — open, honest, and planet-first. A "built-not-bought" world where you own your data, your hardware, and your destiny.
+				</p>
+				<ul class="ethos">
+					{ethos.map((tag) => <li>{tag}</li>)}
+				</ul>
+				<blockquote>Energy Transparency: the greenest computer is the one that already exists.</blockquote>
+			</section>
 
-			<div class="wings">
-				<div class="wing">
-					<h2>Digital Sovereignty</h2>
-					<p>Cloud Exit Audits and Homestead Implementation. Break free from the cloud giants.</p>
-					<a href="/digital" class="button">Enter the Digital Wing</a>
+			<section>
+				<h2 class="section-title">The Sovereignty Loop</h2>
+				<p>
+					Two wings that feed each other, bound by the knowledge of how they're built. When you hire one, you fund the other — and everything becomes part of the open record.
+				</p>
+				<div class="wings">
+					<div class="wing">
+						<h3>Digital Sovereignty</h3>
+						<p><strong>Cloud Exit Audits</strong> — a flat-fee analysis of your cloud spend, turned into a concrete migration roadmap.</p>
+						<p><strong>Homestead Implementation</strong> — self-hosted FOSS stacks on refurbished hardware. 'Obsolete' electronics become sovereign tools: cyberdecks, home-lab controllers, locked-down family devices.</p>
+						<p><strong>The Guardian Retainer</strong> — monthly maintenance, backups, and security. Capped at a handful of clients, application-only, with scheduled windows instead of on-call heroics.</p>
+						<a href="/digital" class="button">Enter the Digital Wing</a>
+					</div>
+					<div class="wing">
+						<h3>Physical Sovereignty</h3>
+						<p><strong>Indie-Author Launchpad</strong> — fulfillment-as-a-service: storage plus shipping for independent authors, so you can focus on the writing.</p>
+						<p><strong>The Sovereign Author Package</strong> — physical fulfillment plus your own Digital Fortress: a self-hosted storefront, private mailing lists, and archival sovereignty.</p>
+						<p><strong>The Anti-KDP Guarantee</strong> — total ownership of the customer relationship and the data. Upcycled packaging, lean supply chains, no corporate middlemen.</p>
+						<a href="/physical" class="button">Enter the Physical Wing</a>
+					</div>
+					<div class="wing">
+						<h3>Education</h3>
+						<p><strong>The Manual</strong> — written SOPs and living documentation, public by default.</p>
+						<p><strong>Masterclasses</strong> — video step-by-steps for FOSS tool implementation.</p>
+						<p><strong>Build-Days</strong> — small-group workshops for home-lab setup and device reclamation.</p>
+						<a href="/education" class="button">Enter the Learning Wing</a>
+					</div>
 				</div>
-				<div class="wing">
-					<h2>Physical Sovereignty</h2>
-					<p>Indie-Author Launchpad. Sustainable fulfillment that puts the creator first.</p>
-					<a href="/physical" class="button">Enter the Physical Wing</a>
+			</section>
+
+			<section>
+				<h2 class="section-title">The Road to Sovereignty</h2>
+				<p>The path from corporate dependence to community autonomy — the same journey we document in public.</p>
+				<ol class="journey">
+					{journey.map((step) => (
+						<li>
+							<h3>{step.title}</h3>
+							<p>{step.text}</p>
+						</li>
+					))}
+				</ol>
+			</section>
+
+			<section>
+				<h2 class="section-title">Quick Wins</h2>
+				<p>
+					Now running at the local library table: productized, flat-fee, no one-offs. Weekends only, two client slots a month. Anything off-menu becomes "a Cloud Exit Audit conversation."
+				</p>
+				<div class="wins">
+					{quickWins.map((win) => (
+						<div class="win">
+							<h3>{win.title}</h3>
+							<p>{win.text}</p>
+						</div>
+					))}
 				</div>
-				<div class="wing">
-					<h2>Knowledge Distribution</h2>
-					<p>Masterclasses and Build-Days. Learning the art of the sovereign stack.</p>
-					<a href="/education" class="button">Enter the Learning Wing</a>
-				</div>
-			</div>
+			</section>
 
 			<hr />
 			<p style="text-align: center;">
-				Want to see how the gears turn? <a href="/manual">Read the Open Ops Manual</a>
+				Want to see how the gears turn? <a href="/manual">Read the Open Ops Manual</a> — the whole business, open-sourced so the community can run it without me. Building in public on <a href="/blog">Punk Pages</a>.
 			</p>
 		</main>
 		<Footer />
@@ -49,11 +141,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 </html>
 
 <style>
+	.hero {
+		margin-bottom: 3rem;
+	}
+	.mission {
+		font-size: 1.333em;
+		font-weight: 700;
+	}
+	.ethos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+	.ethos li {
+		padding: 0.25rem 0.75rem;
+		border: 2px solid var(--accent);
+		border-radius: 999px;
+		font-size: 0.8em;
+		font-weight: 700;
+		color: var(--accent);
+	}
+	.hero blockquote {
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+	}
+	.section-title {
+		font-size: 1.953em;
+		color: var(--accent);
+	}
 	.wings {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 2rem;
-		margin: 3rem 0;
+		margin: 2rem 0;
 	}
 	.wing {
 		padding: 1.5rem;
@@ -65,14 +188,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		border-color: var(--accent);
 		box-shadow: var(--box-shadow);
 	}
-	.wing h2 {
+	.wing h3 {
 		margin-top: 0;
 		font-size: 1.5rem;
 		color: var(--accent);
 	}
+	.wing p {
+		font-size: 0.85em;
+	}
 	.button {
 		display: inline-block;
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: var(--accent);
 		color: white !important;
@@ -82,5 +208,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 	.button:hover {
 		filter: brightness(1.2);
+	}
+	.journey {
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+	.journey li {
+		padding: 0 0 0 1.25rem;
+		border-left: 4px solid var(--accent);
+		margin-bottom: 1.5rem;
+	}
+	.journey h3 {
+		font-size: 1.25em;
+		margin-bottom: 0.25rem;
+	}
+	.journey p {
+		margin-bottom: 0;
+	}
+	.wins {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+	.win {
+		padding: 1.5rem;
+		border: 2px dashed rgb(var(--gray));
+		border-radius: 12px;
+	}
+	.win h3 {
+		margin-top: 0;
+		font-size: 1.25em;
+	}
+	.win p {
+		font-size: 0.85em;
+		margin-bottom: 0;
 	}
 </style>
