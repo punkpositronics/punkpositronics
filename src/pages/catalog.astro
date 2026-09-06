@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+
+type Tool = { name: string; replaces: string; note: string };
+type Section = { title: string; tools: Tool[] };
+
+const quickWins: Section[] = [
+	{
+		title: 'Passwords & Security',
+		tools: [
+			{ name: 'Vaultwarden', replaces: 'LastPass, 1Password, Bitwarden SaaS', note: 'The catalog\'s best first lesson. Enterprise-grade passwords without the monthly fee.' },
+			{ name: 'Pi-hole / AdGuard Home', replaces: 'ISP DNS, ad-block subscriptions', note: 'Network-wide ad blocking. The classic first install.' },
+			{ name: 'LocalSend', replaces: 'AirDrop, WeTransfer', note: 'Zero-config LAN file sharing, friendly to non-technical folks.' },
+			{ name: 'Stirling PDF', replaces: 'Adobe Acrobat, SmallPDF', note: 'Every office\'s first "wow."' },
+			{ name: 'FreshRSS', replaces: 'Feedly', note: 'Own your reading list.' },
+		],
+	},
+	{
+		title: 'The Freedom Baseline',
+		tools: [
+			{ name: 'Linux Mint', replaces: 'Windows 10/11 — license, telemetry, and the "slow laptop" that isn\'t', note: 'The Linux Revival: your own laptop, guided back to life. Free forever, no forced-update reboots, no spyware. LibreOffice preinstalled.' },
+			{ name: 'LibreOffice', replaces: 'Microsoft 365 (local)', note: 'The free local document baseline — ships with every Linux install.' },
+		],
+	},
+];
+
+const homestead: Section[] = [
+	{
+		title: 'Workspace & Collaboration',
+		tools: [
+			{ name: 'Nextcloud', replaces: 'Google Workspace, Microsoft 365, Dropbox', note: 'The sovereign workspace bedrock: files, calendar, collaboration.' },
+			{ name: 'Collabora Online / OnlyOffice', replaces: 'Microsoft 365 (browser)', note: 'Real .docx/.xlsx/.pptx editing in the browser, on your own server. The piece a Cloud Exit Audit cannot dodge.' },
+			{ name: 'Syncthing', replaces: 'Dropbox, OneDrive sync', note: 'Peer-to-peer file sync, no cloud middleman.' },
+			{ name: 'BookStack', replaces: 'Notion, Confluence, SharePoint', note: 'The "Company Brain." WYSIWYG editor, a hierarchy anyone can grasp, MIT-licensed. Succession Protocol approved.' },
+			{ name: 'Paperless-ngx', replaces: 'Filing cabinets, DMS', note: 'The canonical "sovereignty win."' },
+		],
+	},
+	{
+		title: 'Media & Libraries',
+		tools: [
+			{ name: 'Jellyfin', replaces: 'Netflix, Plex', note: 'The flagship Family Media Server. Your movies, music, and shows on hardware you own.' },
+			{ name: 'Immich', replaces: 'Google Photos, iCloud Photos', note: 'The "Google Photos exit" — the most-recommended media tool of 2025.' },
+			{ name: 'Kavita', replaces: 'Kindle/Comixology lock-in', note: 'E-books, manga, comics — the reading hub for the sovereign household.' },
+			{ name: 'Audiobookshelf', replaces: 'Audible', note: 'Audiobooks & podcasts, paired naturally with the indie-author stack.' },
+			{ name: 'Navidrome', replaces: 'Spotify (for owned music)', note: 'Every Subsonic client works with it.' },
+		],
+	},
+	{
+		title: 'Business, Money & Storefronts (The Author Stack)',
+		tools: [
+			{ name: 'Metabase', replaces: 'Power BI, Tableau', note: 'The Sovereignty Analytics delivery vehicle. Dashboards and scheduled reports, zero license fees.' },
+			{ name: 'Grafana', replaces: 'Datadog, Power BI dashboards', note: 'Real-time operational dashboards for the whole estate.' },
+			{ name: 'Medusa', replaces: 'Shopify, the KDP platform tax', note: 'The Digital Fortress storefront engine. Your store, your data, no platform tax.' },
+			{ name: 'listmonk', replaces: 'Mailchimp', note: 'Self-hosted newsletters — the backbone of the Sovereign Author Package\'s private mailing lists.' },
+			{ name: 'InvenTree', replaces: 'Fishbowl, spreadsheet sprawl', note: 'Heavy-duty inventory — essential for hardware and book fulfillment.' },
+			{ name: 'Grocy', replaces: 'Household ERP apps', note: 'ERP for the home and small-scale fulfillment.' },
+			{ name: 'InvoiceShelf / Invoice Ninja', replaces: 'QuickBooks Invoicing, FreshBooks', note: 'Professional invoicing, quotes, and payment tracking.' },
+			{ name: 'Firefly III', replaces: 'Mint, QuickBooks (personal)', note: 'Personal and small-business finance manager.' },
+			{ name: 'Actual Budget', replaces: 'YNAB', note: 'The personal-finance community favorite.' },
+			{ name: 'BTCPay Server', replaces: 'Stripe, PayPal', note: 'Payment processing with no processor skim — the catalog\'s purest disintermediation play.' },
+			{ name: 'EspoCRM / Twenty', replaces: 'Salesforce, HubSpot', note: 'Open-source CRM for leads and clients.' },
+			{ name: 'Monica', replaces: 'Cloze, contact apps', note: 'Personal CRM for deep community relationships.' },
+			{ name: 'Cal.com', replaces: 'Calendly', note: 'Scheduling without the middleman.' },
+			{ name: 'Ghost', replaces: 'Substack, Medium', note: 'The "sovereign Substack" candidate for publishing.' },
+		],
+	},
+];
+
+const expert: Section[] = [
+	{
+		title: 'Heavy Infrastructure',
+		tools: [
+			{ name: 'Proxmox VE', replaces: 'VMware, Hyper-V', note: 'The homelab standard — the homestead stack\'s spine.' },
+			{ name: 'Home Assistant', replaces: 'SmartThings, vendor cloud hubs', note: 'The single most-loved self-hosted project on earth.' },
+			{ name: 'Mattermost / Zulip', replaces: 'Slack, Microsoft Teams', note: 'Self-hosted team communication.' },
+			{ name: 'Jitsi Meet', replaces: 'Zoom, Google Meet', note: 'Private, encrypted video conferencing.' },
+			{ name: 'n8n', replaces: 'Zapier, Make', note: 'The workflow automation engine of every serious stack.' },
+			{ name: 'Authentik / Authelia', replaces: 'Okta, Azure AD', note: 'Centralized identity (SSO) for the whole estate.' },
+			{ name: 'Mailcow / Stalwart', replaces: 'Google Workspace mail', note: 'Self-hosted email — expert tier only. The community\'s clearest red line: 86% don\'t.' },
+		],
+	},
+];
+
+---
+
+<Layout
+	title="The FOSS Sovereignty Catalog"
+	description="A curated menu of open-source tools that replace predatory SaaS — tiered from library-table Quick Wins to full homestead stacks."
+	pubDate={new Date()}
+	heroImage="/og-default.png"
+>
+	<h1>The FOSS Sovereignty Catalog</h1>
+	<p>
+		A curated menu of open-source alternatives to corporate SaaS — the same list we hand clients during Cloud Exit Audits, and a gateway to sovereignty for new homelabbers. Community-validated: these are the tools people actually run, not the ones with the best marketing.
+	</p>
+
+	<h2>How to read it: the Sovereignty Maturity Model</h2>
+	<ul>
+		<li><strong>🟢 Quick Wins</strong> — library-table material. Runs on a laptop, a flash drive, or an old phone. The first lesson.</li>
+		<li><strong>🟡 Homestead</strong> — lives on the NAS/homestead stack. The full sovereign replacement.</li>
+		<li><strong>🔴 Expert</strong> — heavy, multi-component, or high blast-radius. Guardian Retainer territory.</li>
+	</ul>
+
+	<h2>🟢 Quick Wins (Phase 0 — the library table)</h2>
+	{quickWins.map((section) => (
+		<Fragment>
+			<h3>{section.title}</h3>
+			<ul class="tools">
+				{section.tools.map((t) => (
+					<li>
+						<strong>{t.name}</strong>
+						<span class="replaces">replaces {t.replaces}</span>
+						<p>{t.note}</p>
+					</li>
+				))}
+			</ul>
+		</Fragment>
+	))}
+
+	<h2>🟡 Homestead (Phase 1 — the NAS)</h2>
+	<p>This is the Cloud Exit Audit deliverable: the full sovereign replacement stack.</p>
+	{homestead.map((section) => (
+		<Fragment>
+			<h3>{section.title}</h3>
+			<ul class="tools">
+				{section.tools.map((t) => (
+					<li>
+						<strong>{t.name}</strong>
+						<span class="replaces">replaces {t.replaces}</span>
+						<p>{t.note}</p>
+					</li>
+				))}
+			</ul>
+		</Fragment>
+	))}
+
+	<h2>🔴 Expert (Phase 2+ — the Guardian Retainer)</h2>
+	{expert.map((section) => (
+		<Fragment>
+			<h3>{section.title}</h3>
+			<ul class="tools">
+				{section.tools.map((t) => (
+					<li>
+						<strong>{t.name}</strong>
+						<span class="replaces">replaces {t.replaces}</span>
+						<p>{t.note}</p>
+					</li>
+				))}
+			</ul>
+		</Fragment>
+	))}
+
+	<h2>The Honest Ledger</h2>
+	<ul>
+		<li><strong>Fair-code tools</strong> (Metabase, Cal.com, n8n, Twenty): source-available with license limits on hosted competition — not pure OSI, but zero fees for self-hosting.</li>
+		<li><strong>Plex vs Jellyfin:</strong> Plex still wins on client apps; Jellyfin wins the community's heart two-to-one and costs nothing. We lead with Jellyfin and mention Plex honestly.</li>
+		<li><strong>Email:</strong> the community's clearest red line — self-hosting it is expert tier, never a Quick Win.</li>
+		<li><strong>Hardware Policy:</strong> no inventory, no hardware sales, no warranties on gear. Your device, your hands — reclaimed hardware is demo and proof, never product.</li>
+	</ul>
+</Layout>
+
+<style>
+	.tools {
+		list-style: none;
+		padding: 0;
+	}
+	.tools li {
+		padding: 0.75rem 1rem;
+		margin-bottom: 0.75rem;
+		border-left: 4px solid var(--accent);
+		border-radius: 0 8px 8px 0;
+		background: rgba(var(--gray), 0.08);
+	}
+	.tools .replaces {
+		display: block;
+		font-size: 0.8em;
+		font-style: italic;
+		color: rgb(var(--gray));
+	}
+	.tools p {
+		margin: 0.35rem 0 0;
+		font-size: 0.9em;
+	}
+	h3 {
+		margin-top: 2rem;
+	}
+</style>

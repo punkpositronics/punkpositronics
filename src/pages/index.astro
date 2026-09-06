@@ -16,6 +16,13 @@ const ethos = [
 	'Energy Transparency',
 ];
 
+const receipts = [
+	{ stat: '1,300+', label: 'FTE hours/year saved by a single claim-system automation' },
+	{ stat: '10+', label: 'regional reports automated in Python' },
+	{ stat: 'Global', label: 'first ocean-container visibility report, rolled out worldwide' },
+	{ stat: '15 yrs', label: 'supply chain & analytics ownership behind every engagement' },
+];
+
 const journey = [
 	{
 		title: '1. Awareness',
@@ -38,16 +45,28 @@ const journey = [
 const quickWins = [
 	{
 		title: 'The Password Consultation',
-		text: "FREE: 30 minutes - Get your passwords back",
-	},{
-		title: "Kids' Tech Lockdown",
-		text: "Lock down a child's device, or repurpose an old phone into a secure, locked-down family tablet.",
+		text: 'FREE — 30 minutes, hands-on, on our demo gear. Take your passwords back. The trust-builder and the best first lesson.',
+	},
+	{
+		title: 'The Tech Clinic',
+		text: 'One problem, one device, 45 minutes. $40 flat — pay what you can for seniors & students. Slow laptops, scam emails, printer mysteries.',
+	},
+	{
+		title: 'The Linux Revival',
+		text: 'Your slow laptop isn\'t slow — Windows is. A guided Linux Mint install on your own machine. Free software, forever, no license, no telemetry.',
 	},
 	{
 		title: 'The Family Media Server',
-		text: "The Flagship: that old laptop/computer in your closet becomes your family's Netflix (Jellyfin)",
+		text: 'The flagship: that old laptop in your closet becomes your family\'s Netflix (Jellyfin). Your movies, photos, music & e-books — you own it.',
 	},
-	
+	{
+		title: 'Kids\' Tech Lockdown / Phone Reclamation',
+		text: 'Lock down a child\'s device, or repurpose an old phone into a secure, locked-down family tablet.',
+	},
+	{
+		title: 'The Shipping Sovereignty Audit',
+		text: 'For authors & small businesses: packaging, postage, and workflow analyzed — the path from bedroom chaos to lean, sovereign logistics.',
+	},
 ];
 ---
 
@@ -65,41 +84,61 @@ const quickWins = [
 					Removing the parasitic middlemen from digital and physical infrastructure to empower community sovereignty.
 				</p>
 				<p>
-					Punk Positronics is <strong>a man, not a corporation</strong> — open, honest, and planet-first. A "built-not-bought" world where you own your data, your hardware, and your destiny.
+					Punk Positronics is <strong>a man, not a corporation</strong> — people & planet first, open, honest. A "built-not-bought" world where you own your data, your hardware, and your destiny.
 				</p>
 				<ul class="ethos">
 					{ethos.map((tag) => <li>{tag}</li>)}
 				</ul>
-				<blockquote>Energy Transparency: the greenest computer is the one that already exists.</blockquote>
+				<blockquote>
+					Energy Transparency: the greenest computer is the one that already exists.
+				</blockquote>
+				<blockquote>
+					Hardware Policy — Teach, Don't Vend: no inventory, no hardware sales, no warranties on gear. Your device, your hands, guided by expertise. We sell knowledge, labor, and guidance — never markup.
+				</blockquote>
 			</section>
 
 			<section>
 				<h2 class="section-title">The Sovereignty Loop</h2>
 				<p>
-					Two wings that feed each other, bound by the knowledge of how they're built. When you hire one, you fund the other — and everything becomes part of the open record.
+					Three wings that feed each other. When you hire one, you fund the others — and everything becomes part of the open record.
 				</p>
 				<div class="wings">
 					<div class="wing">
 						<h3>Digital Sovereignty</h3>
-						<p><strong>Cloud Exit Audits</strong> — a flat-fee analysis of your cloud spend, turned into a concrete migration roadmap.</p>
-						<p><strong>Homestead Implementation</strong> — self-hosted FOSS stacks on refurbished hardware. 'Obsolete' electronics become sovereign tools: cyberdecks, home-lab controllers, locked-down family devices.</p>
-						<p><strong>The Guardian Retainer</strong> — monthly maintenance, backups, and security. Capped at a handful of clients, application-only, with scheduled windows instead of on-call heroics.</p>
+						<p><strong>Sovereignty Analytics</strong> — the headline: FOSS dashboards replacing your Power BI/Tableau bill, with automated reporting pipelines. Enterprise KPI culture, zero license fees.</p>
+						<p><strong>Cloud Exit Audits</strong> — flat-fee analysis of your cloud spend, turned into a concrete migration roadmap.</p>
+						<p><strong>Homestead Implementation & Device Reclamation</strong> — self-hosted FOSS stacks on refurbished hardware; 'obsolete' electronics become sovereign tools.</p>
+						<p><strong>The Guardian Retainer</strong> — monthly maintenance, backups, and security. Capped at 3–5 clients, application-only, scheduled windows instead of on-call heroics.</p>
 						<a href="/digital" class="button">Enter the Digital Wing</a>
 					</div>
 					<div class="wing">
 						<h3>Physical Sovereignty</h3>
 						<p><strong>Indie-Author Launchpad</strong> — fulfillment-as-a-service: storage plus shipping for independent authors, so you can focus on the writing.</p>
-						<p><strong>The Sovereign Author Package</strong> — physical fulfillment plus your own Digital Fortress: a self-hosted storefront, private mailing lists, and archival sovereignty.</p>
-						<p><strong>The Anti-KDP Guarantee</strong> — total ownership of the customer relationship and the data. Upcycled packaging, lean supply chains, no corporate middlemen.</p>
+						<p><strong>Fulfillment Consultation</strong> — we teach the "how" before we handle the "do." Lean logistics, zero-plastic packaging, inventory systems.</p>
+						<p><strong>The Sovereign Author Package</strong> — physical fulfillment plus your own Digital Fortress: self-hosted storefront, private mailing lists, archival sovereignty.</p>
+						<p><strong>The Anti-KDP Guarantee</strong> — total ownership of the customer relationship and the data.</p>
 						<a href="/physical" class="button">Enter the Physical Wing</a>
 					</div>
 					<div class="wing">
 						<h3>Education</h3>
-						<p><strong>The Manual</strong> — written SOPs and living documentation, public by default.</p>
-						<p><strong>Masterclasses</strong> — video step-by-steps for FOSS tool implementation.</p>
-						<p><strong>Build-Days</strong> — small-group workshops for home-lab setup and device reclamation.</p>
+						<p><strong>The Manual</strong> — the Open Ops record: SOPs and living documentation, public by default, built to outlive any single operator.</p>
+						<p><strong>The FOSS Sovereignty Catalog</strong> — a curated menu of open-source exits from corporate SaaS, tiered for beginners to experts.</p>
+						<p><strong>Masterclasses & Build-Days</strong> — parked until the waitlist says otherwise. Education is exhaust, not a workstream. No brochure promises.</p>
 						<a href="/education" class="button">Enter the Learning Wing</a>
 					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Proof of Work</h2>
+				<p>Sell with receipts, not promises. The corporate track record is the credibility engine for every Cloud Exit Audit:</p>
+				<div class="receipts">
+					{receipts.map((r) => (
+						<div class="receipt">
+							<div class="stat">{r.stat}</div>
+							<p>{r.label}</p>
+						</div>
+					))}
 				</div>
 			</section>
 
@@ -119,7 +158,7 @@ const quickWins = [
 			<section>
 				<h2 class="section-title">Quick Wins</h2>
 				<p>
-					Now running at the local library table: productized, flat-fee, no one-offs. Weekends only, two client slots a month. Anything off-menu becomes "a Cloud Exit Audit conversation."
+					Now running at the library table: productized, flat-fee, no one-offs. Weekends only, two client slots a month. Anything off-menu becomes "a Cloud Exit Audit conversation."
 				</p>
 				<div class="wins">
 					{quickWins.map((win) => (
@@ -208,6 +247,28 @@ const quickWins = [
 	}
 	.button:hover {
 		filter: brightness(1.2);
+	}
+	.receipts {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+	.receipt {
+		padding: 1.5rem;
+		text-align: center;
+		border: 2px solid var(--accent);
+		border-radius: 12px;
+	}
+	.receipt .stat {
+		font-size: 2.2em;
+		font-weight: 800;
+		color: var(--accent);
+		line-height: 1.1;
+	}
+	.receipt p {
+		font-size: 0.8em;
+		margin: 0.5rem 0 0;
 	}
 	.journey {
 		list-style: none;
