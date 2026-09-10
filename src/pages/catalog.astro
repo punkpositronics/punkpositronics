@@ -6,21 +6,29 @@ type Section = { title: string; tools: Tool[] };
 
 const quickWins: Section[] = [
 	{
+		title: 'The On-Ramp',
+		tools: [
+			{ name: 'CasaOS / YunoHost', replaces: 'Cloud App Stores', note: 'The "one-click" entry point for non-technical clients; lowers the friction of the first install.' },
+			{ name: 'Linux Mint', replaces: 'Windows 10/11 — license, telemetry, and the "slow laptop" that isn\'t', note: 'The Linux Revival: your own laptop, guided back to life. Free forever, no forced-update reboots, no spyware. LibreOffice preinstalled.' },
+			{ name: 'LibreOffice', replaces: 'Microsoft 365 (local)', note: 'The free local document baseline — ships with every Linux install.' },
+		],
+	},
+	{
 		title: 'Passwords & Security',
 		tools: [
 			{ name: 'Vaultwarden', replaces: 'LastPass, 1Password, Bitwarden SaaS', note: 'The catalog\'s best first lesson. Enterprise-grade passwords without the monthly fee.' },
 			{ name: 'Pi-hole / AdGuard Home', replaces: 'ISP DNS, ad-block subscriptions', note: 'Network-wide ad blocking. The classic first install.' },
 			{ name: 'LocalSend', replaces: 'AirDrop, WeTransfer', note: 'Zero-config LAN file sharing, friendly to non-technical folks.' },
 			{ name: 'Stirling PDF', replaces: 'Adobe Acrobat, SmallPDF', note: 'Every office\'s first "wow."' },
-			{ name: 'FreshRSS', replaces: 'Feedly', note: 'Own your reading list.' },
-			{ name: 'Zettlr', replaces: 'Notion (personal), Obsidian, Word for drafting', note: 'The student & writer layer: Zotero citations, linked notes, Pandoc export to .docx/.pdf — "your professor wants Word files" answered in FOSS. Desktop app, no server, $0. Preinstalled on every Linux Revival.' },
 		],
 	},
 	{
-		title: 'The Freedom Baseline',
+		title: 'Information Sovereignty',
 		tools: [
-			{ name: 'Linux Mint', replaces: 'Windows 10/11 — license, telemetry, and the "slow laptop" that isn\'t', note: 'The Linux Revival: your own laptop, guided back to life. Free forever, no forced-update reboots, no spyware. LibreOffice preinstalled.' },
-			{ name: 'LibreOffice', replaces: 'Microsoft 365 (local)', note: 'The free local document baseline — ships with every Linux install.' },
+			{ name: 'FreshRSS', replaces: 'Feedly', note: 'Own your reading list. The first step in information sovereignty.' },
+			{ name: 'Wallabag', replaces: 'Pocket, Instapaper', note: 'Sovereign archive of web articles; avoids the "link graveyard."' },
+			{ name: 'Linkding', replaces: 'Browser Bookmarks', note: 'Lightweight, searchable, and device-independent.' },
+			{ name: 'Zettlr', replaces: 'Notion (personal), Obsidian, Word for drafting', note: 'The student & writer layer: Zotero citations, linked notes, Pandoc export to .docx/.pdf — "your professor wants Word files" answered in FOSS. Desktop app, no server, $0. Preinstalled on every Linux Revival.' },
 		],
 	},
 ];
@@ -78,6 +86,8 @@ const expert: Section[] = [
 			{ name: 'Jitsi Meet', replaces: 'Zoom, Google Meet', note: 'Private, encrypted video conferencing.' },
 			{ name: 'LibreChat / Open WebUI', replaces: 'ChatGPT, Claude SaaS', note: 'Sovereign AI gateways. Interface with LLMs privately; can be wired to your own documentation for a "queryable business manual."' },
 			{ name: 'n8n', replaces: 'Zapier, Make', note: 'The workflow automation engine of every serious stack.' },
+			{ name: 'Ansible / OpenTofu', replaces: 'Manual Config / Terraform', note: 'The Guardian\'s toolset; allows for rapid disaster recovery and fleet management.' },
+			{ name: 'Woodpecker CI', replaces: 'GitHub Actions, GitLab CI', note: 'Sovereign build pipelines for the client\'s own custom apps.' },
 			{ name: 'Authentik / Authelia', replaces: 'Okta, Azure AD', note: 'Centralized identity (SSO) for the whole estate.' },
 			{ name: 'Dead Man\'s Switch', replaces: 'Hope and prayer', note: 'The ultimate continuity tool. Ensures encrypted keys and the Living Manual are released to a successor if the key-holder is unavailable.' },
 			{ name: 'Mailcow / Stalwart', replaces: 'Google Workspace mail', note: 'Self-hosted email — expert tier only. The community\'s clearest red line: 86% don\'t.' },
