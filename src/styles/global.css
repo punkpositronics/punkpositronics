@@ -60,7 +60,10 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	/* Longest single word ("Disintermediation.") is 8.762em wide in bold Atkinson,
+	   so scale with viewport to keep it on one line down to 320px screens. */
+	font-size: clamp(1.5em, 10.6vw - 0.43em, 3.052em);
+	overflow-wrap: break-word;
 }
 h2 {
 	font-size: 2.441em;
