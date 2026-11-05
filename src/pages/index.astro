@@ -5,71 +5,106 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const ethos = [
-	'FOSS',
-	'Solar Punk',
-	'Digital Homesteading',
-	'Maker Culture',
-	'Upcycling',
-	'Hardware Reclamation',
-	'DIY',
-	'Community Empowerment',
-	'Energy Transparency',
+	'Free & open-source',
+	'Fix it, don\'t bin it',
+	'Solar-punk spirit',
+	'DIY & hands-on',
+	'Community first',
+	'Reused, not new',
+	'Honest about energy',
+];
+
+const doors = [
+	{
+		title: 'I need tech help',
+		text: 'Slow laptop? Messy passwords? Scam emails? Printer mysteries? Friendly, flat-fee help at the library table — and the first password lesson is free.',
+		href: '/#quick-wins',
+		cta: 'See the quick fixes',
+	},
+	{
+		title: 'I run a business',
+		text: 'Know your numbers without the software bill, get out from under subscription creep, and have someone who keeps it all running.',
+		href: '/digital',
+		cta: 'For business owners',
+	},
+];
+
+const wings = [
+	{
+		title: 'Tech for small business',
+		aside: 'the Digital Sovereignty wing',
+		lines: [
+			'Reports without the software bill — clear dashboards and automatic weekly reports built on free tools that do what Power BI or Tableau do. The flagship service.',
+			'A way out of the cloud — a fixed-price audit of everything you subscribe to, with a step-by-step plan to replace it.',
+			'Your own mini-cloud — your files, calendars, and passwords on a small refurbished server, set up with you and documented for you.',
+			'Ongoing care — a monthly plan that keeps it all updated, backed up, and written down, so the knowledge never lives in one person\'s head. (The Guardian Retainer.)',
+		],
+		href: '/digital',
+		cta: 'See what\'s possible',
+	},
+	{
+		title: 'Guides & learning',
+		aside: 'the Knowledge Base',
+		lines: [
+			'The Open Ops Manual — how this whole business runs, written down so anyone could read or copy it.',
+			'The Free-Tools Catalog — a menu of free software that replaces paid subscriptions, sorted from easy to advanced.',
+			'Classes & workshops — planned, and they start the moment enough people ask. Join the list on Punk Pages.',
+		],
+		href: '/education',
+		cta: 'Learn more',
+	},
 ];
 
 const receipts = [
-	{ stat: '1,300+', label: 'FTE hours/year saved by a single claim-system automation' },
-	{ stat: '10+', label: 'regional reports automated in Python' },
-	{ stat: 'Global', label: 'first ocean-container visibility report, rolled out worldwide' },
-	{ stat: '15 yrs', label: 'supply chain & analytics ownership behind every engagement' },
+	{ stat: '1,300+', label: 'staff-hours a year saved by a single automation I built' },
+	{ stat: '10+', label: 'regional business reports automated end-to-end' },
+	{ stat: 'Global', label: 'a first-of-its-kind shipping report, adopted worldwide' },
+	{ stat: '15 yrs', label: 'of data & logistics work behind every job I take' },
 ];
 
 const journey = [
 	{
-		title: '1. Awareness',
-		text: 'Follow the "Building in Public" journey on Punk Pages — the wins, the failures, and the compromises of going sovereign.',
+		title: '1. Start anywhere',
+		text: 'Read Punk Pages (the build-in-public blog) or meet me at the library table in Red Hill. No pitch, just a conversation.',
 	},
 	{
-		title: '2. Low-Hanging Fruit',
-		text: 'Simple Sovereignty Wins: Vaultwarden for passwords, Jellyfin for movies, Kavita for your e-book shelf, or an old phone reborn as a secure family tablet.',
+		title: '2. Fix one small thing',
+		text: 'Passwords, a slow laptop, family photos, a kid\'s tablet. Small wins build confidence — and they\'re cheap, flat-fee, or free.',
 	},
 	{
-		title: '3. The Pivot',
-		text: 'A flat-fee Cloud Exit Audit maps your dependencies and your cloud spend, then builds the migration roadmap back to hardware you actually own.',
+		title: '3. Map what you rent',
+		text: 'For businesses: a fixed-price audit lists every subscription you pay for, what it costs you, and what could replace it.',
 	},
 	{
-		title: '4. Full Homestead',
-		text: 'Your FOSS stack, implemented on refurbished hardware and secured by the Sovereign Continuity Retainer.',
+		title: '4. Own your setup',
+		text: 'Free tools on hardware that\'s yours, set up with you, with ongoing care if you want it. That\'s the whole destination.',
 	},
 ];
 
 const quickWins = [
 	{
 		title: 'The Password Consultation',
-		text: 'FREE — 30 minutes, hands-on, on our demo gear. Take your passwords back. Like it? Sovereign Vault and Sovereign Household installs put a real vault on hardware you own.',
+		text: 'FREE — 30 minutes, hands-on, using my demo phone (never your real accounts). Leave knowing exactly how to take your passwords back — and if you like, I\'ll set up a real password vault on hardware you own.',
 	},
 	{
 		title: 'The Tech Clinic',
-		text: 'One problem, one device, 45 minutes. $60 flat — pay what you can for seniors & students. Slow laptops, scam emails, printer mysteries.',
+		text: 'One problem, one device, 45 minutes, $60 flat — pay what you can for seniors & students. Slow laptops, scam emails, printer mysteries, phone storage.',
 	},
 	{
 		title: 'The Linux Revival',
-		text: 'Your slow laptop isn\'t slow — Windows is. A guided Linux Mint install on your own machine. Free software, forever, no license, no telemetry.',
+		text: 'Your laptop isn\'t slow — Windows is. A guided install of free software on your own machine. No license fees, no spying, no forced updates.',
 	},
 	{
 		title: 'Essay Rescue',
-		text: 'For students: citations, Word files, and lost notes, fixed free-forever. Zettlr and LibreOffice on your own machine — no subscription between you and your degree.',
+		text: 'For students: citations, Word files, and lost notes — sorted with free tools on your own computer. No subscription between you and your degree.',
 	},
 	{
 		title: 'The Family Media Server',
-		text: 'The flagship: that old laptop in your closet becomes your family\'s Netflix (Jellyfin). Your movies, photos, music & e-books — you own it.',
+		text: 'The flagship: that old laptop in the closet becomes your family\'s own Netflix. Your movies, photos, music & e-books — streaming at home, owned by you.',
 	},
 	{
-		title: 'Kids\' Tech Lockdown / Phone Reclamation',
-		text: 'Lock down a child\'s device, or repurpose an old phone into a secure, locked-down family tablet.',
-	},
-	{
-		title: 'The Shipping Sovereignty Audit',
-		text: 'For authors & small businesses: packaging, postage, and workflow analyzed — the path from bedroom chaos to lean, sovereign logistics.',
+		title: 'Kids\' Devices & Phone Revival',
+		text: 'Lock down a child\'s device, or turn a retired phone into a safe, secure family tablet.',
 	},
 ];
 ---
@@ -83,86 +118,35 @@ const quickWins = [
 		<Header />
 		<main>
 			<section class="hero">
-				<h1>Disintermediation.</h1>
+				<h1>Tech you actually own.</h1>
 				<p class="mission">
-					Removing the parasitic middlemen from digital and physical infrastructure to empower community sovereignty.
+					Hi, I'm JT — your tech neighbor, not a corporation. I help neighbors and small businesses stop renting the tools they use every day — and own them instead.
 				</p>
 				<p>
-					Hey, I'm JT — your tech neighbor, not a corporation. Punk Positronics is a <strong>Knowledge Guild</strong> dedicated to people & planet first: I turn old tech into useful things you own — open source, no subscriptions. A "built-not-bought" world where you own your data, your hardware, and your destiny.
+					That means free, open-source software instead of endless subscriptions. Hardware given a second life instead of the landfill. And help that teaches you as it fixes, so you keep the files, the passwords, and the know-how.
+				</p>
+				<p>
+					It's just me here — the person you talk to is the person who does the work, and everything gets written down so the knowledge stays with you.
 				</p>
 				<ul class="ethos">
 					{ethos.map((tag) => <li>{tag}</li>)}
 				</ul>
-				<blockquote>
-					Energy Transparency: the greenest computer is the one that already exists.
-				</blockquote>
-				<blockquote>
-					Hardware Policy — Teach, Don't Vend: no inventory, no hardware sales, no warranties on gear. Your device, your hands, guided by expertise. We sell knowledge, labor, and guidance — never markup.
-				</blockquote>
 			</section>
 
-			<section>
-				<h2 class="section-title">The Sovereignty Loop</h2>
+			<div class="doors">
+				{doors.map((d) => (
+					<div class="door">
+						<h3>{d.title}</h3>
+						<p>{d.text}</p>
+						<a href={d.href} class="button">{d.cta}</a>
+					</div>
+				))}
+			</div>
+
+			<section id="quick-wins">
+				<h2 class="section-title">Quick fixes, flat prices</h2>
 				<p>
-					Three wings that feed each other. When you hire one, you fund the others — and everything becomes part of the open record.
-				</p>
-				<div class="wings">
-					<div class="wing">
-						<h3>Digital Sovereignty</h3>
-						<p><strong>Sovereignty Analytics</strong> — the headline: FOSS dashboards replacing your Power BI/Tableau bill, with automated reporting pipelines. Enterprise KPI culture, zero license fees.</p>
-						<p><strong>Cloud Exit Audits</strong> — flat-fee analysis of your cloud spend, turned into a concrete migration roadmap.</p>
-						<p><strong>Homestead Implementation & Device Reclamation</strong> — self-hosted FOSS stacks on refurbished hardware; 'obsolete' electronics become sovereign tools.</p>
-						<p><strong>The Guardian Retainer (Sovereign Continuity)</strong> — monthly subscription for maintenance, backups, and security. For SMBs, this is pivoted as Sovereign Continuity: removing "Key Person Risk" and ensuring business continuity through living documentation.</p>
-						<a href="/digital" class="button">Enter the Digital Wing</a>
-					</div>
-					<div class="wing">
-						<h3>Physical Sovereignty</h3>
-						<p><strong>Indie-Author Launchpad</strong> — fulfillment-as-a-service: storage plus shipping for independent authors, so you can focus on the writing.</p>
-						<p><strong>Fulfillment Consultation</strong> — we teach the "how" before we handle the "do." Lean logistics, zero-plastic packaging, inventory systems.</p>
-						<p><strong>The Sovereign Author Package</strong> — physical fulfillment plus your own Digital Fortress: self-hosted storefront, private mailing lists, archival sovereignty.</p>
-						<p><strong>The Anti-Platform Guarantee</strong> — total ownership of the customer relationship and the data. Anti-KDP, Anti-Substack, Anti-Patreon.</p>
-						<a href="/physical" class="button">Enter the Physical Wing</a>
-					</div>
-					<div class="wing">
-						<h3>Education</h3>
-						<p><strong>The Manual</strong> — the Open Ops record: SOPs and living documentation, public by default, built to outlive any single operator.</p>
-						<p><strong>The FOSS Sovereignty Catalog</strong> — a curated menu of open-source exits from corporate SaaS, tiered for beginners to experts.</p>
-						<p><strong>Masterclasses & Build-Days</strong> — parked until the waitlist says otherwise. Education is exhaust, not a workstream. No brochure promises.</p>
-						<a href="/education" class="button">Enter the Learning Wing</a>
-					</div>
-				</div>
-			</section>
-
-			<section>
-				<h2 class="section-title">Proof of Work</h2>
-				<p>Sell with receipts, not promises. The corporate track record is the credibility engine for every Cloud Exit Audit:</p>
-				<div class="receipts">
-					{receipts.map((r) => (
-						<div class="receipt">
-							<div class="stat">{r.stat}</div>
-							<p>{r.label}</p>
-						</div>
-					))}
-				</div>
-			</section>
-
-			<section>
-				<h2 class="section-title">The Road to Sovereignty</h2>
-				<p>The path from corporate dependence to community autonomy — the same journey we document in public.</p>
-				<ol class="journey">
-					{journey.map((step) => (
-						<li>
-							<h3>{step.title}</h3>
-							<p>{step.text}</p>
-						</li>
-					))}
-				</ol>
-			</section>
-
-			<section>
-				<h2 class="section-title">Quick Wins</h2>
-				<p>
-					Now running at <strong>Red Hill Library</strong> (by appointment): productized, flat-fee, no one-offs. Weekends only, two client slots a month. Anything off-menu becomes "a Cloud Exit Audit conversation."
+					Now booking at <strong>Red Hill Library</strong> (weekends, by appointment — two slots a month, so booking ahead matters). Not sure where you fit? Send a message — if it turns out to be a bigger job, we'll talk it through before you pay anything.
 				</p>
 				<div class="wins">
 					{quickWins.map((win) => (
@@ -174,9 +158,64 @@ const quickWins = [
 				</div>
 			</section>
 
+			<section>
+				<h2 class="section-title">Two ways to work together</h2>
+				<p>
+					One person, two kinds of work. They keep each other honest — and everything gets written down in public.
+				</p>
+				<div class="wings">
+					{wings.map((wing) => (
+						<div class="wing">
+							<h3>{wing.title} <span class="aside">{wing.aside}</span></h3>
+							{wing.lines.map((line) => <p>{line}</p>)}
+							<a href={wing.href} class="button">{wing.cta}</a>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Receipts, not promises</h2>
+				<p>Why trust the new guy? Because the work isn't new. Fifteen years of corporate data, automation, and logistics — with numbers to show for it:</p>
+				<div class="receipts">
+					{receipts.map((r) => (
+						<div class="receipt">
+							<div class="stat">{r.stat}</div>
+							<p>{r.label}</p>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">The usual road in</h2>
+				<p>Most people don't go all-in on day one, and you shouldn't either. Here's how it typically goes:</p>
+				<ol class="journey">
+					{journey.map((step) => (
+						<li>
+							<h3>{step.title}</h3>
+							<p>{step.text}</p>
+						</li>
+					))}
+				</ol>
+			</section>
+
+			<section>
+				<h2 class="section-title">A few promises</h2>
+				<blockquote>
+					<strong>I teach — I don't sell gear.</strong> No inventory, no hardware sales, no markups, no warranties on equipment. Your device, your hands, my guidance. What I sell is knowledge and labor, never markup.
+				</blockquote>
+				<blockquote>
+					<strong>The greenest computer already exists.</strong> Everything here runs on refurbished hardware, with an honest, documented journey toward renewable energy.
+				</blockquote>
+				<blockquote>
+					<strong>Nothing is hidden.</strong> The whole business is documented in public — read the <a href="/manual">Open Ops Manual</a> and judge for yourself.
+				</blockquote>
+			</section>
+
 			<hr />
 			<p style="text-align: center;">
-				Want to book a slot? Message <a href="https://www.instagram.com/punkpositronics" target="_blank" rel="noopener noreferrer">@punkpositronics</a> or email <a href="mailto:jt@punkpositronics.com">jt@punkpositronics.com</a>. Want to see how the gears turn? <a href="/manual">Read the Open Ops Manual</a> — the whole business, open-sourced so the community can run it without me. Building in public on <a href="https://punkpositronics.substack.com/" target="_blank" rel="noopener noreferrer">Punk Pages</a>.
+				Book a slot or just ask a question: message <a href="https://www.instagram.com/punkpositronics" target="_blank" rel="noopener noreferrer">@punkpositronics</a> or email <a href="mailto:jt@punkpositronics.com">jt@punkpositronics.com</a>. Writing-in-public (and class announcements) happen on <a href="https://punkpositronics.substack.com/" target="_blank" rel="noopener noreferrer">Punk Pages</a>.
 			</p>
 		</main>
 		<Footer />
@@ -185,7 +224,7 @@ const quickWins = [
 
 <style>
 	.hero {
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 	.mission {
 		font-size: 1.333em;
@@ -197,7 +236,7 @@ const quickWins = [
 		gap: 0.5rem;
 		list-style: none;
 		padding: 0;
-		margin: 2rem 0;
+		margin: 2rem 0 0;
 	}
 	.ethos li {
 		padding: 0.25rem 0.75rem;
@@ -207,13 +246,35 @@ const quickWins = [
 		font-weight: 700;
 		color: var(--accent);
 	}
-	.hero blockquote {
-		padding: 0.5rem 1rem;
-		border-radius: 8px;
+	.doors {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 0 0 3rem;
+	}
+	.door {
+		padding: 1.5rem;
+		border: 3px solid var(--accent);
+		border-radius: 12px;
+	}
+	.door h3 {
+		margin-top: 0;
+		font-size: 1.5rem;
+		color: var(--accent);
+	}
+	.door p {
+		font-size: 0.9em;
 	}
 	.section-title {
 		font-size: 1.953em;
 		color: var(--accent);
+	}
+	.aside {
+		display: block;
+		font-size: 0.55em;
+		font-style: italic;
+		font-weight: 600;
+		color: rgb(var(--gray));
 	}
 	.wings {
 		display: grid;

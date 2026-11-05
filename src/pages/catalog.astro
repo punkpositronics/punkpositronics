@@ -23,9 +23,9 @@ const quickWins: Section[] = [
 		],
 	},
 	{
-		title: 'Information Sovereignty',
+		title: 'Reading, News & Notes',
 		tools: [
-			{ name: 'FreshRSS', replaces: 'Feedly', note: 'Own your reading list. The first step in information sovereignty.' },
+			{ name: 'FreshRSS', replaces: 'Feedly', note: 'Own your reading list — the first step to keeping your news out of an algorithm\'s hands.' },
 			{ name: 'Wallabag', replaces: 'Pocket, Instapaper', note: 'Sovereign archive of web articles; avoids the "link graveyard."' },
 			{ name: 'Linkding', replaces: 'Browser Bookmarks', note: 'Lightweight, searchable, and device-independent.' },
 			{ name: 'Zettlr', replaces: 'Notion (personal), Obsidian, Word for drafting', note: 'The student & writer layer: Zotero citations, linked notes, Pandoc export to .docx/.pdf — "your professor wants Word files" answered in FOSS. Desktop app, no server, $0. Preinstalled on every Linux Revival.' },
@@ -56,20 +56,20 @@ const homestead: Section[] = [
 			{ name: 'Jellyfin', replaces: 'Netflix, Plex', note: 'The flagship Family Media Server. Your movies, music, and shows on hardware you own.' },
 			{ name: 'Immich', replaces: 'Google Photos, iCloud Photos', note: 'The "Google Photos exit" — the most-recommended media tool of 2025.' },
 			{ name: 'Kavita', replaces: 'Kindle/Comixology lock-in', note: 'E-books, manga, comics — the reading hub for the sovereign household.' },
-			{ name: 'Audiobookshelf', replaces: 'Audible', note: 'Audiobooks & podcasts, paired naturally with the indie-author stack.' },
+			{ name: 'Audiobookshelf', replaces: 'Audible', note: 'Audiobooks & podcasts you own, served from hardware you own.' },
 			{ name: 'Navidrome', replaces: 'Spotify (for owned music)', note: 'Every Subsonic client works with it.' },
 			{ name: 'Mealie', replaces: 'Paprika, recipe apps', note: 'Recipes and meal planning — the family\'s gateway drug to self-hosting.' },
 		],
 	},
 	{
-		title: 'Business, Money & Storefronts (The Author Stack)',
+		title: 'Business, Money & Storefronts',
 		tools: [
 			{ name: 'Metabase', replaces: 'Power BI, Tableau', note: 'The Sovereignty Analytics delivery vehicle. Dashboards and scheduled reports, zero license fees.' },
 			{ name: 'Grafana', replaces: 'Datadog, Power BI dashboards', note: 'Real-time operational dashboards for the whole estate. Essential for Sovereign Continuity reporting.' },
 			{ name: 'Medusa', replaces: 'Shopify, the KDP platform tax', note: 'The Digital Fortress storefront engine. Your store, your data, no platform tax.' },
-			{ name: 'listmonk', replaces: 'Mailchimp', note: 'Self-hosted newsletters — the backbone of the Sovereign Author Package\'s private mailing lists.' },
-			{ name: 'InvenTree', replaces: 'Fishbowl, spreadsheet sprawl', note: 'Heavy-duty inventory — essential for hardware and book fulfillment.' },
-			{ name: 'Grocy', replaces: 'Household ERP apps', note: 'ERP for the home and small-scale fulfillment. Overkill for plain shared lists — that\'s Vikunja\'s job (Quick Wins); Grocy earns its keep when you want full household ops (stock, chores, pantries).' },
+			{ name: 'listmonk', replaces: 'Mailchimp', note: 'Self-hosted newsletters — your mailing list, on your server, no per-subscriber fee or platform skimming your readers.' },
+			{ name: 'InvenTree', replaces: 'Fishbowl, spreadsheet sprawl', note: 'Heavy-duty inventory — for workshops, makers, and stock-heavy small businesses.' },
+			{ name: 'Grocy', replaces: 'Household ERP apps', note: 'ERP for the home. Overkill for plain shared lists — that\'s Vikunja\'s job (Easy wins); Grocy earns its keep when you want full household ops (stock, chores, pantries).' },
 			{ name: 'InvoiceShelf / Invoice Ninja', replaces: 'QuickBooks Invoicing, FreshBooks', note: 'Professional invoicing, quotes, and payment tracking.' },
 			{ name: 'Firefly III', replaces: 'Mint, QuickBooks (personal)', note: 'Personal and small-business finance manager.' },
 			{ name: 'Actual Budget', replaces: 'YNAB', note: 'The personal-finance community favorite.' },
@@ -104,24 +104,24 @@ const expert: Section[] = [
 ---
 
 <Layout
-	title="The FOSS Sovereignty Catalog"
-	description="A curated menu of open-source tools that replace predatory SaaS — tiered from library-table Quick Wins to full homestead stacks."
+	title="The Free-Tools Catalog"
+	description="A menu of free, open-source software that replaces paid subscriptions — sorted from try-it-this-afternoon to full business setups."
 	pubDate={new Date()}
 	heroImage="/og-default.png"
 >
-	<h1>The FOSS Sovereignty Catalog</h1>
+	<h1>The Free-Tools Catalog</h1>
 	<p>
-		A curated menu of open-source alternatives to corporate SaaS — the same list we hand clients during Cloud Exit Audits, and a gateway to sovereignty for new homelabbers. Community-validated: these are the tools people actually run, not the ones with the best marketing.
+		Free and open-source software — <em>FOSS</em> — does what the paid subscriptions do, without the monthly bill and without a company peeking at your data. This is the same menu I hand to every business-audit client, sorted from "try it this afternoon" to "run your whole operation on it." (Its long name is the <em>FOSS Sovereignty Catalog</em> — all that means is: tools you own.)
 	</p>
 
-	<h2>How to read it: the Sovereignty Maturity Model</h2>
+	<h2>How to read the colors</h2>
 	<ul>
-		<li><strong>🟢 Quick Wins</strong> — library-table material. Runs on a laptop, a flash drive, or an old phone. The first lesson.</li>
-		<li><strong>🟡 Homestead</strong> — lives on the NAS/homestead stack. The full sovereign replacement.</li>
-		<li><strong>🔴 Expert</strong> — heavy, multi-component, or high blast-radius. Guardian Retainer territory.</li>
+		<li><strong>🟢 Easy wins</strong> — runs on a laptop, a flash drive, or an old phone. Try one this afternoon.</li>
+		<li><strong>🟡 Your own setup</strong> — lives on a small home server. The full replacement for paid subscriptions.</li>
+		<li><strong>🔴 Advanced</strong> — heavy or high-stakes. This is where ongoing-care clients live.</li>
 	</ul>
 
-	<h2>🟢 Quick Wins (Phase 0 — the library table)</h2>
+	<h2>🟢 Easy wins</h2>
 	{quickWins.map((section) => (
 		<Fragment>
 			<h3>{section.title}</h3>
@@ -137,8 +137,8 @@ const expert: Section[] = [
 		</Fragment>
 	))}
 
-	<h2>🟡 Homestead (Phase 1 — the NAS)</h2>
-	<p>This is the Cloud Exit Audit deliverable: the full sovereign replacement stack.</p>
+	<h2>🟡 Your own setup</h2>
+	<p>This tier is what a business audit delivers: a complete replacement for the tools you rent today.</p>
 	{homestead.map((section) => (
 		<Fragment>
 			<h3>{section.title}</h3>
@@ -154,7 +154,7 @@ const expert: Section[] = [
 		</Fragment>
 	))}
 
-	<h2>🔴 Expert (Phase 2+ — the Guardian Retainer)</h2>
+	<h2>🔴 Advanced</h2>
 	{expert.map((section) => (
 		<Fragment>
 			<h3>{section.title}</h3>
@@ -172,10 +172,10 @@ const expert: Section[] = [
 
 	<h2>The Honest Ledger</h2>
 	<ul>
-		<li><strong>Fair-code tools</strong> (Metabase, Cal.com, n8n, Twenty): source-available with license limits on hosted competition — not pure OSI, but zero fees for self-hosting.</li>
-		<li><strong>Plex vs Jellyfin:</strong> Plex still wins on client apps; Jellyfin wins the community's heart two-to-one and costs nothing. We lead with Jellyfin and mention Plex honestly.</li>
-		<li><strong>Email:</strong> the community's clearest red line — self-hosting it is expert tier, never a Quick Win.</li>
-		<li><strong>Hardware Policy:</strong> no inventory, no hardware sales, no warranties on gear. Your device, your hands — reclaimed hardware is demo and proof, never product.</li>
+		<li><strong>Some tools are "source-available"</strong> (Metabase, Cal.com, n8n, Twenty): free to run yourself, with limits mainly on reselling them as a hosted service.</li>
+		<li><strong>Plex vs Jellyfin:</strong> Plex still has the slicker apps; Jellyfin is free, open, and loved. I lead with Jellyfin — and I'll tell you honestly when Plex fits better.</li>
+		<li><strong>Email stays rented:</strong> running your own email server is the one job even most experts leave alone. I'll never sell it to you as an easy win.</li>
+		<li><strong>I don't sell gear:</strong> no inventory, no hardware sales, no warranties on equipment. Demo machines show what's possible — everything else is your device, your hands, my guidance.</li>
 	</ul>
 </Layout>
 
